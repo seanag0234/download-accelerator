@@ -4,7 +4,6 @@ import time
 import argparse
 
 
-
 class DownThread(threading.Thread):
     def __init__(self, url, begin, end, debug):
         threading.Thread.__init__(self)
@@ -112,4 +111,5 @@ elif d == 'f':
 start_time = time.time()
 url = args.url
 total_bytes = main(url, num_threads, debug)
+
 print url, " ", num_threads, "thread(s) ", total_bytes, ("bytes %s seconds" % (time.time() - start_time))
