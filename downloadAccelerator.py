@@ -43,7 +43,7 @@ def main(url="", num_threads=1, debug=False):
         name = "index.html"
     if debug:
         print "name is ", name
-    my_file = open(name, 'w+')
+    my_file = open(name, 'wb')
 
     if num_threads <= 0:
         print "The number of threads must be greater than zero."
