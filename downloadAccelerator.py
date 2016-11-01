@@ -28,6 +28,8 @@ def get_content(url, start=0, end=99):
 
 def get_total_bytes(url):
     h = head(url)
+    if h.headers['Content-Length'] == "None":
+        return 0
     return h.headers['Content-Length']
 
 
